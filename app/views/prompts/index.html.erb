@@ -1,0 +1,8 @@
+<h2>Index: Show a list of all prompts</h2>
+
+<%for match in @all_prompts%>
+	<ul>
+		<li><a href= <%=prompt_path(match)%>><%=match.title%> </a></li>
+	</ul>
+<%end%>
+	

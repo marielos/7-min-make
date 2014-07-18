@@ -1,0 +1,29 @@
+
+
+<h2> Today's creativity challenge: </h2>
+
+<%if @prompt.errors.any? %>
+    <div id="error_explanation">
+      <h3><%= pluralize(@prompt.errors.count, "error") %>
+          prohibited this prompt from being saved:</h3>
+      <ul>
+        <% @prompt.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+
+<%= form_for(@prompt, :url => prompts_path(@prompts)) do |form| %> 
+<table>
+	<tr>
+		<td><%=form.label ("Challenge:")%></td>
+	    <td><%=form.text_field (:title)%></td>
+	</tr>
+    <tr>
+		<td><%=form.submit ("Submit")%></td>
+	</tr>
+</table>
+<% end %>

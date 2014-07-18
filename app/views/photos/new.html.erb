@@ -1,0 +1,54 @@
+  <%=javascript_include_tag "photos.js"%>
+
+
+<%if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "error") %>
+          prohibited this photo from being saved:</h2>
+      <ul>
+        <% @photo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<h2> Add a photo </h2>
+
+
+<%= form_for @photo,
+:url => photos_path(@prompt),
+:html=>{:multipart=>true} do |form| %> 
+<table>
+<input type="button" value="Start my creation" onclick="quickCount(7);">
+<div id="counterDiv"/>
+	<tr>
+		<td><%=form.label ("Name:")%></td>
+	    <td><%=form.text_field (:user_name)%></td>
+	</tr>
+	<tr>
+	    <td><%=form.label ("Email:")%></td>
+    	<td><%=form.text_field (:user_email)%></td>
+    </tr>
+    <tr>
+    	<td><%=form.label ("Prompt Submission:")%></td>
+		<td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td>
+	</tr>
+    <tr>
+		<!-- <td id="uploader"><%=form.file_field :photo%></td> -->
+     <td><input type='file' id="imgInp" />
+     <br>
+        <img id="blah" src="#" alt="your image" /></td>
+	</tr>
+    <tr>
+		<td><%=form.submit ("Submit")%></td>
+	</tr>
+	</table>
+<% end %>
+
+
+<script type = "text/javascript"> 
+$("#imgInp").change(function(){
+    readURL(this);
+});
+</script> 
