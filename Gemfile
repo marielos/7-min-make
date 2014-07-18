@@ -44,5 +44,11 @@ gem 'activerecord-session_store'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
+group :development, :test do 
+  gem 'sqlite3'
+end
+
+gem 'pg'
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
