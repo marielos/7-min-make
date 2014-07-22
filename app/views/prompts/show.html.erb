@@ -1,7 +1,7 @@
 <h2><%=@prompt.title%></h2>
 
 <div class = "button">
-<%=link_to "Submit creation", new_photo_path%>
+<%=link_to "Submit creation and REDIRECT", new_prompt_photo_path(:id)%>
 </div>
 
 
@@ -15,3 +15,4 @@
 		<%=photo.user_name%>
 	</div>
 <%end%>
+

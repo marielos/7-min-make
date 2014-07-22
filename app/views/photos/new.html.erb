@@ -17,7 +17,7 @@
 
 
 <%= form_for @photo,
-:url => photos_path(@prompt),
+:url => prompt_photos_path,
 :html=>{:multipart=>true} do |form| %> 
 <table>
 <input type="button" value="Start my creation" onclick="quickCount(7);">
@@ -35,8 +35,8 @@
 		<td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td>
 	</tr>
     <tr>
-		<!-- <td id="uploader"><%=form.file_field :photo%></td> -->
-     <td><input type='file' id="imgInp" />
+		 <td id="imgInp"><%=form.file_field :photo %></td>
+   <!--   <td><input type='file' id="imgInp" /> -->
      <br>
         <img id="blah" src="#" alt="your image" /></td>
 	</tr>
@@ -48,7 +48,8 @@
 
 
 <script type = "text/javascript"> 
-$("#imgInp").change(function(){
+$("#photo_photo").change(function(){
+  console.log("somewhat?")
     readURL(this);
 });
 </script> 

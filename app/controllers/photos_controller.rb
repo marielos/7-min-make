@@ -1,11 +1,14 @@
 class PhotosController < ApplicationController
 
 	def new()
+		#@prompt = Prompt.find_by_id(params[:prompt_id])
 		@photo = Photo.new
 	end
 
 	def create()
+		@prompt = Prompt.find_by_id(params[:prompt_id])
 		if params[:photo][:photo]
+
   			uploaded_io = params[:photo][:photo]
   			File.open(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename), 'wb') do |file|
     			file.write(uploaded_io.read)
@@ -14,7 +17,7 @@ class PhotosController < ApplicationController
 
 		@photo = Photo.new
 		@photo.date_time = DateTime.now
-		if params[:photo][:photo]
+		if params[:photo]
 			@photo.user_name = params[:photo][:user_name]
 			@photo.user_email = params[:photo][:user_email]
 			@photo.file_name = params[:photo][:photo].original_filename
