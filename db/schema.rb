@@ -18,12 +18,11 @@ ActiveRecord::Schema.define(version: 20140710193256) do
     t.string   "file_name"
     t.datetime "date_time"
     t.string   "user_name"
-    t.string   "user_email"
+    t.string   "creation_title"
   end
 
   create_table "prompts", force: true do |t|
-    t.string   "title"
-    t.datetime "date_time"
+    t.string "title"
   end
 
   create_table "sessions", force: true do |t|

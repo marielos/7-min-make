@@ -2,6 +2,8 @@ class PhotosController < ApplicationController
 
 	#Each page shows one of the photos belonging to the given prompt
 	def show()
+		@prompt = Prompt.find_by_id(params[:prompt_id])
+		@photo = Photo.find_by_id(params[:id])
 	end
 	
 
@@ -13,7 +15,6 @@ class PhotosController < ApplicationController
 	def create()
 		@prompt = Prompt.find_by_id(params[:prompt_id])
 		if params[:photo][:photo]
-
   			uploaded_io = params[:photo][:photo]
   			File.open(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename), 'wb') do |file|
     			file.write(uploaded_io.read)
@@ -22,14 +23,14 @@ class PhotosController < ApplicationController
 
 		@photo = Photo.new
 		@photo.date_time = DateTime.now
-		if params[:photo]
+		if params[:photo][:photo]
 			@photo.user_name = params[:photo][:user_name]
-			@photo.user_email = params[:photo][:user_email]
+			@photo.creation_title = params[:photo][:creation_title]
 			@photo.file_name = params[:photo][:photo].original_filename
-			@photo.prompt_id = params[:photo][:prompt_id]
+			@photo.prompt_id = @prompt.id
 		end
 		if @photo.save
-      		redirect_to(prompt_path(@photo.prompt_id), notice: "You have submitted a photo!")
+      		redirect_to(prompt_photo_path(@prompt, @photo), notice: "You have submitted a photo!")
 		else
 			flash.notice = "You have to add a photo to be able to submit"
       		render :new

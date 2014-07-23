@@ -1,64 +1,62 @@
 <%=javascript_include_tag "photos.js"%>
-<div id="part1">
-<h2>You have 7 minutes to</h2>
-<h2><%=@prompt.title%></h2>
-<body onload="quickCount(7)"></body> 
 
-<table id="counter">
-<tr>
-  <div id="counterDiv"></div>
-</tr>
-<tr>
-  <input type="button" value="Submit creation" id="submitForm">
- <!--  onclick="showForm"> -->
-</tr>
-</table>
+
+<div id="part1">
+  <h2>You have 7 minutes to...</h2>
+  <h2>"<%=@prompt.title%>"</h2>
+  <body onload="quickCount(7)"></body> 
+  <!--  Change this onload to something cleaner? -->
+  <table id="counter">
+    <tr>
+      <div id="counterDiv"></div>
+    </tr>
+    <tr>
+      <input type="button" value="Submit creation" id="submitForm">
+      <!--  Change this to a cleaner format? -->
+    </tr>
+  </table>
 </div>
 
 
 <div id="part2">
-<%if @photo.errors.any? %>
+  <%if @photo.errors.any?%>
     <div id="error_explanation">
-      <h2><%= pluralize(@photo.errors.count, "error") %>
+      <h2><%=pluralize(@photo.errors.count, "error")%>
           prohibited this photo from being saved:</h2>
       <ul>
-        <% @photo.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
+        <%@photo.errors.full_messages.each do |msg|%>
+          <li><%=msg%></li>
+        <%end%>
       </ul>
     </div>
-<% end %>
+  <%end%>
 
 
 
-<%= form_for @photo,
-:url => prompt_photos_path,
-:html=>{:multipart=>true} do |form| %> 
-<table id="submit">
-	<tr>
-	 <td><%=form.label ("Name:")%></td>
-	 <td><%=form.text_field (:user_name)%></td>
-	</tr>
-	<tr>
-	 <td><%=form.label ("Creation Title:")%></td>
-    <td><%=form.text_field (:file_name)%></td>
-  </tr>
-  <tr>
-     <td id="imgInp"><%=form.file_field :photo %></td>
-   <!--  <td><%=form.label ("Prompt Submission:")%></td> -->
-		<!-- <td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td> -->
-	</tr>
-  <tr>
-		 
-
-   <!--   <td><input type='file' id="imgInp" /> -->
-      <td><img id="blah" src="#" alt="your image" /></td>
-	</tr>
-  <tr>
-		<td><%=form.submit ("Submit")%></td>
-	</tr>
-	</table>
-<% end %>
+  <%=form_for @photo,:url => prompt_photos_path,:html=>{:multipart=>true} do |form|%> 
+    <table id="submit">
+    	<tr>
+        <td><%=form.label ("Name:")%></td>
+        <td><%=form.text_field (:user_name)%></td>
+    	</tr>
+    	<tr>
+        <td><%=form.label ("Creation Title:")%></td>
+        <td><%=form.text_field (:creation_title)%></td>
+      </tr>
+      <tr>
+        <td id="imgInp"><%=form.file_field :photo %></td>
+        <!--  <td><%=form.label ("Prompt Submission:")%></td> -->
+        <!-- <td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td> -->
+    	</tr>
+      <tr>
+        <!--   <td><input type='file' id="imgInp" /> -->
+        <td><img id="blah" src="#" alt="your image" /></td>
+    	</tr>
+      <tr>
+    		<td><%=form.submit ("Submit")%></td>
+    	</tr>
+    </table>
+  <%end%>
 </div>
 
 
@@ -66,7 +64,6 @@
 $("#photo_photo").change(function(){
     readURL(this);
 });
-
 
 $("#submitForm").click(function(){
   event.preventDefault();
