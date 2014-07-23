@@ -1,7 +1,12 @@
 class PhotosController < ApplicationController
 
+	#Each page shows one of the photos belonging to the given prompt
+	def show()
+	end
+	
+
 	def new()
-		#@prompt = Prompt.find_by_id(params[:prompt_id])
+		@prompt = Prompt.find_by_id(params[:prompt_id])
 		@photo = Photo.new
 	end
 

@@ -1,6 +1,22 @@
-  <%=javascript_include_tag "photos.js"%>
+<%=javascript_include_tag "photos.js"%>
+<div id="part1">
+<h2>You have 7 minutes to</h2>
+<h2><%=@prompt.title%></h2>
+<body onload="quickCount(7)"></body> 
+
+<table id="counter">
+<tr>
+  <div id="counterDiv"></div>
+</tr>
+<tr>
+  <input type="button" value="Submit creation" id="submitForm">
+ <!--  onclick="showForm"> -->
+</tr>
+</table>
+</div>
 
 
+<div id="part2">
 <%if @photo.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@photo.errors.count, "error") %>
@@ -13,43 +29,50 @@
     </div>
 <% end %>
 
-<h2> Add a photo </h2>
 
 
 <%= form_for @photo,
 :url => prompt_photos_path,
 :html=>{:multipart=>true} do |form| %> 
-<table>
-<input type="button" value="Start my creation" onclick="quickCount(7);">
-<div id="counterDiv"/>
+<table id="submit">
 	<tr>
-		<td><%=form.label ("Name:")%></td>
-	    <td><%=form.text_field (:user_name)%></td>
+	 <td><%=form.label ("Name:")%></td>
+	 <td><%=form.text_field (:user_name)%></td>
 	</tr>
 	<tr>
-	    <td><%=form.label ("Email:")%></td>
-    	<td><%=form.text_field (:user_email)%></td>
-    </tr>
-    <tr>
-    	<td><%=form.label ("Prompt Submission:")%></td>
-		<td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td>
+	 <td><%=form.label ("Creation Title:")%></td>
+    <td><%=form.text_field (:file_name)%></td>
+  </tr>
+  <tr>
+     <td id="imgInp"><%=form.file_field :photo %></td>
+   <!--  <td><%=form.label ("Prompt Submission:")%></td> -->
+		<!-- <td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td> -->
 	</tr>
-    <tr>
-		 <td id="imgInp"><%=form.file_field :photo %></td>
+  <tr>
+		 
+
    <!--   <td><input type='file' id="imgInp" /> -->
-     <br>
-        <img id="blah" src="#" alt="your image" /></td>
+      <td><img id="blah" src="#" alt="your image" /></td>
 	</tr>
-    <tr>
+  <tr>
 		<td><%=form.submit ("Submit")%></td>
 	</tr>
 	</table>
 <% end %>
+</div>
 
 
 <script type = "text/javascript"> 
 $("#photo_photo").change(function(){
-  console.log("somewhat?")
     readURL(this);
 });
+
+
+$("#submitForm").click(function(){
+  event.preventDefault();
+  $("#part1").hide();
+  $("#part2").css("visibility","visible");
+  return false;
+});
+
 </script> 

@@ -1,18 +1,11 @@
-<h2><%=@prompt.title%></h2>
+<!-- <h2><%=@prompt.title%></h2> -->
+
+<h3>Are you ready for today's challenge?</h3>
 
 <div class = "button">
-<%=link_to "Submit creation and REDIRECT", new_prompt_photo_path(:id)%>
+<%=link_to "START", new_prompt_photo_path(params[:id])%>
 </div>
 
 
 
-<%for photo in @prompt.photos do%>
-	<div class = "entry">
-		<%=photo.file_name%>
-		<br>
-		<%=image_tag photo.file_name%>
-		<br>
-		<%=photo.user_name%>
-	</div>
-<%end%>
 
