@@ -32775,3 +32775,304 @@ ActionView::Template::Error (The partial name (/prompts/1) is not a valid Ruby i
   Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
   Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
   Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.1ms)
+
+
+Started GET "/prompts/1" for 127.0.0.1 at 2014-07-25 16:23:35 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PromptsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered prompts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 42.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:23:35 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:35 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:35 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:35 -0600
+
+
+Started GET "/prompts/1/photos" for 127.0.0.1 at 2014-07-25 16:23:37 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT 1
+  Rendered photos/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 4.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:37 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:37 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:37 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:23:37 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPrompt Load (0.2ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered photos/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPrompt Load (0.2ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered photos/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-25 16:23:49 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered photos/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started POST "/prompts/1/photos" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IablASwRHvYMFYyQsQVQtsUmtGq66AS91UcMr1klNaQ=", "photo"=>{"user_name"=>"", "creation_title"=>"", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007fcb86861ce0 @tempfile=#<Tempfile:/var/folders/5k/6t68ytzx5vdggynph49m_wl00000gn/T/RackMultipart20140725-7314-bx2oxq>, @original_filename="IMG_2025.MOV", @content_type="video/quicktime", @headers="Content-Disposition: form-data; name=\"photo[photo]\"; filename=\"IMG_2025.MOV\"\r\nContent-Type: video/quicktime\r\n">}, "commit"=>"Submit", "prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "photos" ("creation_title", "date_time", "image_file", "prompt_id", "user_name") VALUES (?, ?, ?, ?, ?)[0m  [["creation_title", ""], ["date_time", Fri, 25 Jul 2014 22:24:13 UTC +00:00], ["image_file", "IMG_2025.MOV"], ["prompt_id", 1], ["user_name", ""]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/prompts/1/photos/12
+Completed 302 Found in 38ms (ActiveRecord: 6.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFJYWJsQVN3Ukh2WU1GWXlRc1FW\nUXRzVW10R3E2NkFTOTFVY01yMWtsTmFRPQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwBJIgxmbGFzaGVzBjsAVHsGOgtub3RpY2VJIiBZb3Ug\naGF2ZSBzdWJtaXR0ZWQgYSBwaG90byEGOwBU\n"], ["updated_at", Fri, 25 Jul 2014 22:24:13 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/prompts/1/photos/12" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"12"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 12 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 13 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 11 LIMIT 1
+  Rendered photos/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFJYWJsQVN3Ukh2WU1GWXlRc1FW\nUXRzVW10R3E2NkFTOTFVY01yMWtsTmFRPQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwY6C25vdGljZUkiDGZsYXNoZXMGOwBUewY7BkkiIFlv\ndSBoYXZlIHN1Ym1pdHRlZCBhIHBob3RvIQY7AFQ=\n"], ["updated_at", Fri, 25 Jul 2014 22:24:13 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/assets/IMG_2025.MOV" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/assets/IMG_2025.MOV" for 127.0.0.1 at 2014-07-25 16:24:13 -0600
+
+
+Started GET "/prompts/1/photos/11" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"11"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 11 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 12 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 10 LIMIT 1
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1  [["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFJYWJsQVN3Ukh2WU1GWXlRc1FW\nUXRzVW10R3E2NkFTOTFVY01yMWtsTmFRPQY7AEY=\n"], ["updated_at", Fri, 25 Jul 2014 22:24:19 UTC +00:00]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+
+
+Started GET "/assets/2012-12-29%2010.38.49.jpg" for 127.0.0.1 at 2014-07-25 16:24:19 -0600
+
+
+Started GET "/prompts/1/photos/10" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"10"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 10 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 11 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 9 LIMIT 1
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+
+
+Started GET "/assets/2012-12-29%2010.38.49.jpg" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:24:21 -0600
+
+
+Started GET "/prompts/1/photos/9" for 127.0.0.1 at 2014-07-25 16:24:23 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"9"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 9 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 10 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 8 LIMIT 1[0m
+  Rendered photos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:24 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:24:24 -0600
+
+
+Started GET "/assets/2013-01-02%2018.17.55.jpg" for 127.0.0.1 at 2014-07-25 16:24:24 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:24 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:24 -0600
+
+
+Started GET "/prompts" for 127.0.0.1 at 2014-07-25 16:24:33 -0600
+Processing by PromptsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/marielos/7-min-make/app/controllers/prompts_controller.rb:6)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/marielos/7-min-make/app/controllers/prompts_controller.rb:6)
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered prompts/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (The partial name (/prompts/1) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+    1: 
+    2: <%render "/prompts/1"%>
+    3: 
+    4: <h2>Index: Show a list of all prompts</h2>
+    5: 
+  app/views/prompts/index.html.erb:2:in `_app_views_prompts_index_html_erb___1618467795768740015_70256029221860'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/prompts" for 127.0.0.1 at 2014-07-25 16:24:36 -0600
+Processing by PromptsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /Users/marielos/7-min-make/app/controllers/prompts_controller.rb:6)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /Users/marielos/7-min-make/app/controllers/prompts_controller.rb:6)
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered prompts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (The partial name (/prompts/1) is not a valid Ruby identifier; make sure your partial name starts with a lowercase letter or underscore, and is followed by any combination of letters, numbers and underscores.):
+    1: 
+    2: <%render "/prompts/1"%>
+    3: 
+    4: <h2>Index: Show a list of all prompts</h2>
+    5: 
+  app/views/prompts/index.html.erb:2:in `_app_views_prompts_index_html_erb___1618467795768740015_70256029221860'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/prompts/1" for 127.0.0.1 at 2014-07-25 16:24:40 -0600
+Processing by PromptsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '1ba26a02875ff8f4d977e3548c0ddd1d' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered prompts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:40 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:40 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-25 16:24:40 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-25 16:24:40 -0600
