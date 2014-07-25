@@ -1,21 +1,6 @@
 <%=javascript_include_tag "photos.js"%>
 
 
-<div id="part1">
-  <h2>You have 7 minutes to...</h2>
-  <h2>"<%=@prompt.title%>"</h2>
-  <body onload="quickCount(7)"></body> 
-  <!--  Change this onload to something cleaner? -->
-  <table id="counter">
-    <tr>
-      <div id="counterDiv"></div>
-    </tr>
-    <tr>
-      <input type="button" value="Submit creation" id="submitForm">
-      <!--  Change this to a cleaner format? -->
-    </tr>
-  </table>
-</div>
 
 
 <div id="part2">
@@ -66,10 +51,6 @@ $("#photo_photo").change(function(){
 });
 
 $("#submitForm").click(function(){
-  event.preventDefault();
-  $("#part1").hide();
-  $("#part2").css("visibility","visible");
-  return false;
 });
 
 </script> 

@@ -1,9 +1,18 @@
 class PhotosController < ApplicationController
 
+	def index()
+		@prompt = Prompt.find_by_id(params[:prompt_id])
+		@photo = Photo.find_by_id(params[:id])
+	end
+
 	#Each page shows one of the photos belonging to the given prompt
 	def show()
 		@prompt = Prompt.find_by_id(params[:prompt_id])
 		@photo = Photo.find_by_id(params[:id])
+		@id = params[:id]
+		@next = Photo.find_by_id(@id.to_i+1)
+		@prev = Photo.find_by_id(@id.to_i-1)
+
 	end
 	
 
@@ -26,7 +35,7 @@ class PhotosController < ApplicationController
 		if params[:photo][:photo]
 			@photo.user_name = params[:photo][:user_name]
 			@photo.creation_title = params[:photo][:creation_title]
-			@photo.file_name = params[:photo][:photo].original_filename
+			@photo.image_file = params[:photo][:photo].original_filename
 			@photo.prompt_id = @prompt.id
 		end
 		if @photo.save

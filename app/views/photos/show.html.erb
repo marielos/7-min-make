@@ -1,15 +1,34 @@
+<%=javascript_include_tag "photos.js"%>
+
+
 <h2><%=@prompt.title%></h2>
 
 <div class = "button">
 <%=link_to "Submit Another", new_prompt_photo_path(params[:id])%>
 </div>
 
+
+<table>
+<td>
+<%if @prev%>
+	<%=link_to "<", prompt_photo_path(params[:prompt_id], @prev.id)%>
+<%end%>
+</td>
+<td>
 <div class = "entry">
 	<%=@photo.creation_title%>
 	<br>
-	<%=image_tag @photo.file_name%>
+	<%=image_tag @photo.image_file%>
 	<br>
 	<%=@photo.user_name%>
 </div>
+</td>
+<td>
+<%if @next%>
+	<%=link_to ">", prompt_photo_path(params[:prompt_id], @next.id)%>
+<%end%>
+</td>
+
+
 
 

@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
 	belongs_to :prompt
 
-	validates :file_name, :presence=>true
+	validates :image_file, :presence=>true
 end

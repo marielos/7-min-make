@@ -1,0 +1,21 @@
+<%=javascript_include_tag "photos.js"%>
+
+
+<div id="part1">
+  <h2>You have 7 minutes to...</h2>
+  <h2>"<%=@prompt.title%>"</h2>
+  <body onload="quickCount(7)"></body> 
+  <!--  Change this onload to something cleaner? -->
+  <table id="counter">
+    <tr>
+      <div id="counterDiv"></div>
+    </tr>
+    <tr>
+    	<%=link_to "SUBMIT CREATION", new_prompt_photo_path(@prompt)%>
+     <!--  <input type="button" value="Submit creation" id="submitForm"> -->
+      <!--  Change this to a cleaner format? -->
+    </tr>
+  </table>
+</div>
+
+	

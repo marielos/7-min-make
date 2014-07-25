@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140710193256) do
 
   create_table "photos", force: true do |t|
     t.integer  "prompt_id"
-    t.string   "file_name"
+    t.string   "image_file"
     t.datetime "date_time"
     t.string   "user_name"
     t.string   "creation_title"
