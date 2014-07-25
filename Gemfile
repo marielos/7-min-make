@@ -8,7 +8,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-gem 'pg'
+#gem 'pg'
 
 
 # Use SCSS for stylesheets
