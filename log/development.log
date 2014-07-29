@@ -34015,3 +34015,816 @@ Started GET "/assets/Blob%20with%20lashes.png" for 127.0.0.1 at 2014-07-29 14:40
 
 
 Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:40:47 -0600
+
+
+Started GET "/prompts/1/photos/2" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"2"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 3 LIMIT 1[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1
+  Rendered photos/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 187ms (Views: 163.8ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:30 -0600
+
+
+Started GET "/assets/Blob%20with%20lashes.png" for 127.0.0.1 at 2014-07-29 14:44:31 -0600
+
+
+Started GET "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT 1[0m
+  Rendered photos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:44:33 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:44:35 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered photos/new.html.erb within layouts/application (36.2ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%= form_for(@project) do |f| %>
+    16:   <% if @project.errors.any? %>
+    17:     <div id="error_explanation">
+    18:       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358091292600'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.7ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:44:35 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered photos/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%= form_for(@project) do |f| %>
+    16:   <% if @project.errors.any? %>
+    17:     <div id="error_explanation">
+    18:       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358107462300'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:45:00 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered photos/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `photos_path' for #<#<Class:0x007ffb0c210980>:0x007ffb0c1f3448>):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%=form_for @photo do |form|%> 
+    16:     <table id="submit">
+    17:     	<tr>
+    18:         <td><%=form.label ("Name:")%></td>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358108441560'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:45:21 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered photos/new.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `photos_path' for #<#<Class:0x007ffb0c210980>:0x007ffb0c338588>):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%=form_for @photo do |form|%> 
+    16:     <table id="submit">
+    17:     	<tr>
+    18:         <td><%=form.label ("Name:")%></td>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358109132420'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT 1
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:45:24 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:45:26 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  Rendered photos/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `photos_path' for #<#<Class:0x007ffb0c210980>:0x007ffb0c140a50>):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%=form_for @photo do |form|%> 
+    16:     <table id="submit">
+    17:     	<tr>
+    18:         <td><%=form.label ("Name:")%></td>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358108101200'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:45:26 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.2ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  Rendered photos/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `photos_path' for #<#<Class:0x007ffb0c210980>:0x007ffb0a129ff0>):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%=form_for @photo do |form|%> 
+    16:     <table id="submit">
+    17:     	<tr>
+    18:         <td><%=form.label ("Name:")%></td>
+  app/views/photos/new.html.erb:15:in `_app_views_photos_new_html_erb__988011506080228949_70358109132420'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:45:41 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_photos_new_html_erb__988011506080228949_70358124849440 RAISED /Users/marielos/7-min-make/app/views/photos/new.html.erb:15: syntax error, unexpected keyword_do_block
+...,:url => prompt_photos_path, do |form|@output_buffer.safe_ap...
+...                               ^
+/Users/marielos/7-min-make/app/views/photos/new.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+Function body:           def _app_views_photos_new_html_erb__988011506080228949_70358124849440(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "photos/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1> form page </h1>
+<div id="part2">
+';  if @photo.errors.any?
+@output_buffer.safe_append='    <div id="error_explanation">
+      <h2>';@output_buffer.append=(pluralize(@photo.errors.count, "error"));@output_buffer.safe_append='
+          prohibited this photo from being saved:</h2>
+      <ul>
+';        @photo.errors.full_messages.each do |msg|
+@output_buffer.safe_append='          <li>';@output_buffer.append=(msg);@output_buffer.safe_append='</li>
+';        end
+@output_buffer.safe_append='      </ul>
+    </div>
+';  end
+@output_buffer.safe_append='
+  ';@output_buffer.append= form_for @photo,:url => prompt_photos_path, do |form|@output_buffer.safe_append=' 
+';@output_buffer.safe_append='    <table id="submit">
+    	<tr>
+        <td>';@output_buffer.append=(form.label ("Name:"));@output_buffer.safe_append='</td>
+        <td>';@output_buffer.append=(form.text_field (:user_name));@output_buffer.safe_append='</td>
+    	</tr>
+    	<tr>
+        <td>';@output_buffer.append=(form.label ("Creation Title:"));@output_buffer.safe_append='</td>
+        <td>';@output_buffer.append=(form.text_field (:creation_title));@output_buffer.safe_append='</td>
+      </tr>
+      <tr>
+        <td id="imgInp">';@output_buffer.append=(form.file_field :photo );@output_buffer.safe_append='</td>
+        <!--  <td>';@output_buffer.append=(form.label ("Prompt Submission:"));@output_buffer.safe_append='</td> -->
+        <!-- <td>';@output_buffer.append=(form.collection_select(:prompt_id, Prompt.all, :id, :title));@output_buffer.safe_append='</td> -->
+    	</tr>
+      <tr>
+        <!--   <td><input type=\'file\' id="imgInp" /> -->
+        <td><img id="blah" src="#" alt="your image" /></td>
+    	</tr>
+      <tr>
+    		<td>';@output_buffer.append=(form.submit ("Submit"));@output_buffer.safe_append='</td>
+    	</tr>
+    </table>
+';  end
+@output_buffer.safe_append='</div>
+
+
+<script type = "text/javascript"> 
+$("#photo_photo").change(function(){
+    readURL(this);
+});
+
+// $("#submitForm").click(function(){
+// });
+
+</script> 
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__387361700484982422__process_action__callbacks'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activerecord-4.0.2/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activerecord-4.0.2/lib/active_record/query_cache.rb:36:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activerecord-4.0.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activerecord-4.0.2/lib/active_record/migration.rb:369:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__698233360538065329__call__callbacks'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered photos/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Users/marielos/7-min-make/app/views/photos/new.html.erb:15: syntax error, unexpected keyword_do_block
+...,:url => prompt_photos_path, do |form|@output_buffer.safe_ap...
+...                               ^
+/Users/marielos/7-min-make/app/views/photos/new.html.erb:52: syntax error, unexpected keyword_ensure, expecting end-of-input):
+    12:     </div>
+    13:   <%end%>
+    14: 
+    15:   <%=form_for @photo,:url => prompt_photos_path, do |form|%> 
+    16:     <table id="submit">
+    17:     	<tr>
+    18:         <td><%=form.label ("Name:")%></td>
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.2) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.2) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.2) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.2) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.2) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.2) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.2) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.2) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.2) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.2) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.2) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:403:in `_run__387361700484982422__process_action__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.2) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.2) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.2) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.2) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.2) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.2) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.2) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__698233360538065329__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/marielos/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/marielos/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.5ms)
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.1ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered photos/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 14:46:15 -0600
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.2ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  [1m[35mPrompt Load (0.2ms)[0m  SELECT "prompts".* FROM "prompts"
+  Rendered photos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+
+
+Started POST "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rpzZiwttZNKSpN7/Ie26tTXIbfsPO/xXC5gwM/2p9T8=", "photo"=>{"user_name"=>"", "creation_title"=>""}, "commit"=>"Submit", "prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mPrompt Load (0.2ms)[0m  [1mSELECT "prompts".* FROM "prompts"[0m
+  Rendered photos/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.2ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwBJIgxmbGFzaGVzBjsAVHsGOgtub3RpY2VJIjFZb3Ug\naGF2ZSB0byBhZGQgYSBwaG90byB0byBiZSBhYmxlIHRvIHN1Ym1pdAY7AFQ=\n"], ["updated_at", Tue, 29 Jul 2014 20:46:25 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT 1[0m
+  Rendered photos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwY6C25vdGljZUkiDGZsYXNoZXMGOwBUewY7BkkiMVlv\ndSBoYXZlIHRvIGFkZCBhIHBob3RvIHRvIGJlIGFibGUgdG8gc3VibWl0BjsA\nVA==\n"], ["updated_at", Tue, 29 Jul 2014 20:46:25 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+
+
+Started GET "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:46:25 -0600
+Processing by PhotosController#index as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.2ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT 1[0m
+  Rendered photos/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEY=\n"], ["updated_at", Tue, 29 Jul 2014 20:46:25 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+
+
+Started POST "/prompts/1/photos" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rpzZiwttZNKSpN7/Ie26tTXIbfsPO/xXC5gwM/2p9T8=", "photo"=>{"user_name"=>"", "creation_title"=>"", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007ffb0968c110 @tempfile=#<Tempfile:/var/folders/5k/6t68ytzx5vdggynph49m_wl00000gn/T/RackMultipart20140729-29232-ady064>, @original_filename="Blob with lashes.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"photo[photo]\"; filename=\"Blob with lashes.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Submit", "prompt_id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "photos" ("creation_title", "date_time", "image_file", "prompt_id", "user_name") VALUES (?, ?, ?, ?, ?)  [["creation_title", ""], ["date_time", Tue, 29 Jul 2014 20:46:30 UTC +00:00], ["image_file", "Blob with lashes.png"], ["prompt_id", 1], ["user_name", ""]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/prompts/1/photos/3
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwBJIgxmbGFzaGVzBjsAVHsGOgtub3RpY2VJIiBZb3Ug\naGF2ZSBzdWJtaXR0ZWQgYSBwaG90byEGOwBU\n"], ["updated_at", Tue, 29 Jul 2014 20:46:30 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/prompts/1/photos/3" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"3"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.1ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 3 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 4 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1[0m
+  Rendered photos/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwY6C25vdGljZUkiDGZsYXNoZXMGOwBUewY7BkkiIFlv\ndSBoYXZlIHN1Ym1pdHRlZCBhIHBob3RvIQY7AFQ=\n"], ["updated_at", Tue, 29 Jul 2014 20:46:30 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  commit transaction
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/assets/Blob%20with%20lashes.png" for 127.0.0.1 at 2014-07-29 14:46:30 -0600
+
+
+Started GET "/prompts/1/photos/2" for 127.0.0.1 at 2014-07-29 14:46:32 -0600
+Processing by PhotosController#show as HTML
+  Parameters: {"prompt_id"=>"1", "id"=>"2"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mPrompt Load (0.1ms)[0m  SELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2 LIMIT 1[0m
+  [1m[35mPhoto Load (0.1ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 3 LIMIT 1
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 1 LIMIT 1[0m
+  Rendered photos/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1[0m  [["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFycHpaaXd0dFpOS1NwTjcvSWUy\nNnRUWEliZnNQTy94WEM1Z3dNLzJwOVQ4PQY7AEY=\n"], ["updated_at", Tue, 29 Jul 2014 20:46:32 UTC +00:00]]
+  [1m[35m (2.6ms)[0m  commit transaction
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 14:46:32 -0600
+
+
+Started GET "/assets/Blob%20with%20lashes.png" for 127.0.0.1 at 2014-07-29 14:46:32 -0600
