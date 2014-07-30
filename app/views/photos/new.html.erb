@@ -1,4 +1,4 @@
-<h1> form page </h1>
+
 <div id="part2">
   <%if @photo.errors.any?%>
     <div id="error_explanation">
@@ -18,24 +18,19 @@
         <td><%=form.label ("Name:")%></td>
         <td><%=form.text_field (:user_name)%></td>
     	</tr>
-    	<tr>
-        <td><%=form.label ("Creation Title:")%></td>
-        <td><%=form.text_field (:creation_title)%></td>
-      </tr>
-      <tr>
-        <td id="imgInp"><%=form.file_field :photo %></td>
-        <!--  <td><%=form.label ("Prompt Submission:")%></td> -->
-        <!-- <td><%=form.collection_select(:prompt_id, Prompt.all, :id, :title)%></td> -->
-    	</tr>
-      <tr>
-        <!--   <td><input type='file' id="imgInp" /> -->
-        <td><img id="blah" src="#" alt="your image" /></td>
-    	</tr>
-      <tr>
-    		<td><%=form.submit ("Submit")%></td>
-    	</tr>
     </table>
+
+    
   <%end%>
 </div>
 
 
+<script type = "text/javascript"> 
+$("#photo_photo").change(function(){
+    readURL(this);
+});
+
+$("#submitForm").click(function(){
+});
+
+</script> 
