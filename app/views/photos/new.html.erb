@@ -12,7 +12,7 @@
     </div>
   <%end%>
 
-  <%=form_for @photo,:url => prompt_photos_path(@prompt, @photo),:html=>{:multipart=>true} do |form|%> 
+  <%=form_for @photo,:url => "/maker.herokuapp.com/prompts/1/photos/1",:html=>{:multipart=>true} do |form|%> 
     <table id="submit">
     	<tr>
         <td><%=form.label ("Name:")%></td>
