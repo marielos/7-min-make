@@ -27,8 +27,8 @@ Maker::Application.configure do
   #config.assets.js_compressor = :uglifier
   #config.assets.css_compressor = :sass
   config.assets.compress = true
-  config.assets.js_compressor = :uglify
-  config.assets.css_compressor = :yui
+  #config.assets.js_compressor = :uglify
+  #config.assets.css_compressor = :yui
 
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
