@@ -35844,3 +35844,51 @@ Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 21:37:21 -06
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 21:37:21 -0600
+
+
+Started GET "/prompts/1/photos/new" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#new as HTML
+  Parameters: {"prompt_id"=>"1"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.1ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '31876810807da2a2b2526169a8526d65' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mPrompt Load (0.1ms)[0m  [1mSELECT "prompts".* FROM "prompts" WHERE "prompts"."id" = 1 LIMIT 1[0m
+  Rendered photos/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 157ms (Views: 138.3ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/jquery-1.10.2.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/countdown.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/jquery-ui-1.10.4.custom.min.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/jquery.ui.touch-punch.min.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:16 -0600
+
+
+Started GET "/assets/prompts.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:17 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 21:40:17 -0600
