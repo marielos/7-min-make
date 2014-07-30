@@ -12,14 +12,15 @@
     </div>
   <%end%>
 
-  <%=form_for @photo,:url => prompt_photos_path(@prompt, @photo),:html=>{:multipart=>true} do |form|%> 
+   <%=form_for @photo,:url => prompt_photos_path,:html=>{:multipart=>true} do |form|%> 
     <table id="submit">
     	<tr>
         <td><%=form.label ("Name:")%></td>
         <td><%=form.text_field (:user_name)%></td>
     	</tr>
     	<tr>
-  
+        <td><%=form.label ("Creation Title:")%></td>
+       
       </tr>
       <tr>
         <td id="imgInp"><%=form.file_field :photo %></td>
